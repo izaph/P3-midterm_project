@@ -1,0 +1,4 @@
+2024-11-28,Depressed,P3 project
+2024-11-28,Happy,Play League of Legends
+2024-11-28,Happy,Read a book
+2024-11-28,Angry,Getting bugs in my code
