@@ -44,7 +44,8 @@ public class MentalWellnessTracker {
             System.out.println("2. Add Log");
             System.out.println("3. Clear Logs");
             System.out.println("4. Activity Suggestion");
-            System.out.println("5. Exit");
+            System.out.println("5. Multithreaded Activity Suggestion");
+            System.out.println("6. Exit");
 
             System.out.print("Enter your choice: ");
             int choice = 0;
@@ -117,8 +118,15 @@ public class MentalWellnessTracker {
                         System.err.println(e.getMessage());
                     }
                     break;
+                case 5: // Multithreaded Activity Suggestions
+                    System.out.print("Enter moods (comma-separated): ");
+                    String moodsInput = scanner.nextLine();
+                    List<String> moods = List.of(moodsInput.split(","));
+                    ActivitySuggestionMultithreaded.suggestActivitiesConcurrently(moods);
+                    break;
 
-                case 5: // Exit
+
+                case 6: // Exit
                     try {
                         user.saveLogsToFile(filePath);
                         System.out.println("Logs saved to file. Exiting...");
